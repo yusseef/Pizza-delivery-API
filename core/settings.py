@@ -27,6 +27,7 @@ DEBUG = config('DEBUG', cast = bool),
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'authentication.User'
 
 # Application definition
 
@@ -43,7 +44,8 @@ INSTALLED_APPS = [
 
 
     #Third part apps
-    'rest_framework'
+    'rest_framework',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
