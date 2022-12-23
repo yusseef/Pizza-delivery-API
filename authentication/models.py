@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.base_user import BaseUserManager
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
-
+    
 # Create your models here.
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password, **extra_fields):
