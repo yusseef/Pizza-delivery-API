@@ -1,5 +1,5 @@
 
-# Pizza deliver Api
+# Pizza delivery Api
 
 Pizza delivery Api made with Django, DjangoRest..
 
