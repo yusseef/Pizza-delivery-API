@@ -44,10 +44,11 @@ INSTALLED_APPS = [
 
 
 
-    #Third part apps
+    #Third part apps    
     'rest_framework',
     'phonenumber_field',
     'djoser',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +60,17 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+SWAGGER_SETTINGS={
+    'SECURITY_DEFINITIONS':{
+        'Bearer':{
+            'type':'apiKey',
+            'in':'header',
+            'name':'Authorization'
+        }
+    }
+}
+
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -69,6 +81,7 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 
 }
+
 ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
