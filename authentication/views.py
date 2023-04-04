@@ -16,7 +16,6 @@ class UserView(generics.GenericAPIView):
     serializer_class = UserCreationSerializer
     @swagger_auto_schema(operation_summary= "Create Users")
     def post(self,request):
-        data=request.data
 
         serializer=self.serializer_class(data=request.data)
 
